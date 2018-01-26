@@ -1,0 +1,47 @@
+{
+    "id":"example",
+    "name": "Daterangepicker example",
+    "modules": {
+        "content": {
+            "path": "{example}/modules/content",
+            "autoload": true
+        },
+        "style": {
+            "path": "[css]!{example}/style/style.css",
+            "autoload": true
+        }
+    },
+
+    "i18n": {
+        "en": ["{example}/i18n/messages-en.json"],
+        "fr": ["{example}/i18n/messages-fr.json"]
+    },
+
+    "routes": {
+        "content":{
+            "templateUrl":"{example}/views/content.html",
+            "controller":"ContentController"
+        }
+    },
+    "requireConfig" : {
+        "paths":{
+            "moment":"${components-path:bower_components}/moment/moment",
+            "{bootstrap-daterangepicker}":"${components-path:bower_components}/bootstrap-daterangepicker",
+            "{angular-daterangepicker}":"${components-path:bower_components}/angular-daterangepicker"
+        },
+        "shim" : {
+            "{bootstrap-daterangepicke}/daterangepicker": {
+                "deps": ["jquery","{bootstrap}/js/bootstrap"],
+                "exports": "bootstrap-daterangepicker"
+            },
+            "moment":{
+                "exports":"moment"
+            },
+            "{angular-daterangepicker}/js/angular-daterangepicker":{
+                "deps": ["{angular}/angular","{bootstrap-daterangepicker}/daterangepicker","moment"],
+                "exports": "angular-daterangepicker"
+            }
+        }
+
+    }
+}
