@@ -1,7 +1,7 @@
 define([
     '{angular}/angular',
     '{angular-resource}/angular-resource',
-    '{angular-daterangepicker}/js/angular-daterangepicker',
+    '{angular-daterangepicker}/angular-daterangepicker',
     "[css]!{bootstrap-daterangepicker}/daterangepicker.css"
 ], function(angular) {
     'use strict';

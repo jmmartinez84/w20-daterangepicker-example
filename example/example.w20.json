@@ -27,7 +27,7 @@
         "paths":{
             "moment":"${components-path:bower_components}/moment/moment",
             "{bootstrap-daterangepicker}":"${components-path:bower_components}/bootstrap-daterangepicker",
-            "{angular-daterangepicker}":"${components-path:bower_components}/angular-daterangepicker"
+            "{angular-daterangepicker}":"libraries/angular-daterangepicker"
         },
         "shim" : {
             "{bootstrap-daterangepicke}/daterangepicker": {
@@ -37,7 +37,7 @@
             "moment":{
                 "exports":"moment"
             },
-            "{angular-daterangepicker}/js/angular-daterangepicker":{
+            "{angular-daterangepicker}/angular-daterangepicker":{
                 "deps": ["{angular}/angular","{bootstrap-daterangepicker}/daterangepicker","moment"],
                 "exports": "angular-daterangepicker"
             }
