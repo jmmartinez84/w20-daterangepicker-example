@@ -25,7 +25,8 @@
     },
     "requireConfig" : {
         "paths":{
-            "moment":"${components-path:bower_components}/moment/moment",
+            "moment-modern":"${components-path:bower_components}/moment-modern/moment",
+            "moment-legacy":"${components-path:bower_components}/moment-legacy/moment",
             "{bootstrap-daterangepicker}":"${components-path:bower_components}/bootstrap-daterangepicker",
             "{angular-daterangepicker}":"libraries/angular-daterangepicker"
         },
@@ -34,11 +35,14 @@
                 "deps": ["jquery","{bootstrap}/js/bootstrap"],
                 "exports": "bootstrap-daterangepicker"
             },
-            "moment":{
-                "exports":"moment"
+            "moment-modern":{
+                "exports":"moment-modern"
+            },
+            "moment-legacy":{
+                "exports":"moment-legacy"
             },
             "{angular-daterangepicker}/angular-daterangepicker":{
-                "deps": ["{angular}/angular","{bootstrap-daterangepicker}/daterangepicker","moment"],
+                "deps": ["{angular}/angular","{bootstrap-daterangepicker}/daterangepicker","moment-modern"],
                 "exports": "angular-daterangepicker"
             }
         }

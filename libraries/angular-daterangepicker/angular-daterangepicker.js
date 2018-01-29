@@ -1,5 +1,5 @@
 define([
-    "moment"
+    "moment-modern"
   ],function(moment) {
     var picker;
   

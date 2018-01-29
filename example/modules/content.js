@@ -1,9 +1,11 @@
 define([
     '{angular}/angular',
+    'moment-modern',
+    'moment-legacy',
     '{angular-resource}/angular-resource',
     '{angular-daterangepicker}/angular-daterangepicker',
-    "[css]!{bootstrap-daterangepicker}/daterangepicker.css"
-], function(angular) {
+    "[css]!{bootstrap-daterangepicker}/daterangepicker.css",
+], function(angular, momentModern) {
     'use strict';
 
 	var module = angular.module('content', ['ngResource','daterangepicker']);
@@ -17,6 +19,8 @@ define([
                 endDate: null
             }
         };
+        $scope.momentModernVersion = momentModern.version;
+        $scope.momentLegacyVersion = moment.version;
   
               
     }]);

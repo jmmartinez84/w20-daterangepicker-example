@@ -5,6 +5,15 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
     </header>
-   <!-- <input type="text" date-range-picker ng-model="dates"/>-->
+    <h3>We have 2 versions of the same library working on this module.</h3>
+    <ul>
+        <li>
+            moment.js v<span>{{momentModernVersion}}</span>
+        </li>
+        <li>
+            moment.js v<span>{{momentLegacyVersion}}</span>
+        </li>
+    </ul>
    <input date-range-picker class="form-control date-picker" type="text" ng-model="datePicker.date" />
+   
 </div>
